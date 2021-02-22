@@ -3,6 +3,7 @@
 cp -r .config ${HOME}
 cp -r .icons ${HOME}
 cp -r .themes ${HOME}
+cp -r sheldon ${HOME}/.config
 
 if [ ! -f "$HOME/.hex/hex.config" ]; then
     cp $HOME/Downloads/desktop-assets/hex.config $HOME/.hex/hex.config

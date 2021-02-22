@@ -16,7 +16,6 @@ function install() {
 
 # Basics
 
-install compinit
 install gimp
 install gnome-tweaks
 install neofetch
@@ -26,18 +25,24 @@ install slack-desktop
 install vim
 install zsh
 
-flatpak install spotify -y
-flatpak install zoom -y
+flatpak install com.spotify.Client -y
+flatpak install us.zoom.Zoom -y
 
 # Run all scripts in programs/
 for f in script/programs/*.sh; do bash "$f" -H; done
 
 # Install Starship prompt
-sudo curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+which starship &>/dev/null
+if [ $? -ne 0]; then
+  sudo curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+fi
 
 # Install Sheldon zsh plugin manager
-sudo curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh |
-  bash -s -- --repo rossmacarthur/sheldon --to /usr/local/bin
+which sheldon &>/dev/null
+if [ $? -ne 0]; then
+  sudo curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh |
+    bash -s -- --repo rossmacarthur/sheldon --to /usr/local/bin
+fi
 
 # Get all upgrades
 sudo apt upgrade -y

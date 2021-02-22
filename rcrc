@@ -1,2 +1,3 @@
-EXCLUDES="script asdf-plugins assets"
+EXCLUDES="script asdf-plugins"
 SYMLINK_DIRS="sheldon zsh"
+DOTFILES_DIRS="~/src/github.com/enewbury/dotfiles"
