@@ -1,0 +1,11 @@
+{
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "dark+(elixir)",
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true
+    }
+}

@@ -1,0 +1,2 @@
+EXCLUDES="script asdf-plugins assets"
+SYMLINK_DIRS="sheldon zsh"
