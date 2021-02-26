@@ -34,14 +34,14 @@ for f in script/programs/*.sh; do bash "$f" -H; done
 # Install Starship prompt
 which starship &>/dev/null
 if [ $? -ne 0]; then
-  sudo curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+  sudo curl -fsSL https://starship.rs/install.sh | sudo bash -s -- -y
 fi
 
 # Install Sheldon zsh plugin manager
 which sheldon &>/dev/null
 if [ $? -ne 0]; then
   sudo curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh |
-    bash -s -- --repo rossmacarthur/sheldon --to /usr/local/bin
+    sudo bash -s -- --repo rossmacarthur/sheldon --to /usr/local/bin
 fi
 
 # Get all upgrades
