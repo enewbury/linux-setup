@@ -1,6 +1,4 @@
-# @enewbury has dotfiles!
-
-My preferred starting configuration for PopOS Desktop. Current version 20.10 
+## My preferred starting configuration for PopOS Desktop. Current version 20.10 
 
 Run `script/setup.sh` to configure a new computer
 
